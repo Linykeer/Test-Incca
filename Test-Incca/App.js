@@ -1,19 +1,21 @@
-import {View, Text} from 'react-native'
-import React, {Component} from 'react'
-import Header from './src/components/Header'
-import Post from './src/components/Post'
-
+import React, { Component } from "react";
+import { StatusBar, View } from "react-native";
+import Routes from "./src/routes";
+import { FooterLast } from "./src/components/index";
 
 export default class App extends Component {
-  render () {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+
+  render() {
     return (
-      <View style={{flex:1}}>
-        <Header />
-        <Post image={require('./assets/imgs/Logo.png')} 
-            comments= {comments}/>
+      <View style={{ flex: 1 }}>
+        <StatusBar backgroundColor={"#FF8C00"} barStyle="light-content" />
+        <Routes />
       </View>
-    )
+    );
   }
 }
-
-
