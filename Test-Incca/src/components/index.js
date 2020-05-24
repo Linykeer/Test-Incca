@@ -1,4 +1,4 @@
-import React from "./node_modules/react";
+import React from "react";
 import {
   Linking,
   StyleSheet,
@@ -16,11 +16,11 @@ import {
   Title,
   Text,
   View,
-} from "./node_modules/native-base";
-import Entypo from "./node_modules/react-native-vector-icons/Entypo";
+} from "native-base";
+import Entypo from "react-native-vector-icons/Entypo";
 import Login from "../pages/login/Login";
-import usuario from "../assets/imagens/usuario.png";
-import usuarios from "../assets/imagens/usuario.png";
+import usuario from "../assets/imgs/usuario.png";
+import usuarios from "../assets/imgs/usuario.png";
 
 
 

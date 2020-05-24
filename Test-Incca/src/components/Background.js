@@ -1,7 +1,7 @@
-import React from "./node_modules/react";
+import React from "react";
 import { StyleSheet, ImageBackground } from "react-native";
-import { Root } from "./node_modules/native-base";
-import LinearGradient from "./node_modules/react-native-linear-gradient";
+import { Root } from "native-base";
+import LinearGradient from "react-native-linear-gradient";
 
 const Background = (props) => {
   return (

@@ -65,7 +65,7 @@ export default class VisualizarUsuarios extends Component {
                               >
                                 <Left>
                                   <Thumbnail
-                                    source={require("../../assets/imagens/imgSemImagem.png")}
+                                    source={require("../../assets/imgs/imgSemImagem.png")}
                                     style={{ opacity: 0.5 }}
                                   />
                                 </Left>
