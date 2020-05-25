@@ -66,8 +66,8 @@ export const MenuItem = (props) => {
 export const Toolbar = (props) => {
   return (
     <Header
-      androidStatusBarColor="#FF4500"
-      style={{ backgroundColor: "#FF4500", width: "100%" }}
+      androidStatusBarColor="#FF8C00"
+      style={{ backgroundColor: "#FF8C00", width: "100%" }}
     >
       <Left style={{ flex: 0.5 }}>
         {props.title !== "Home" && (

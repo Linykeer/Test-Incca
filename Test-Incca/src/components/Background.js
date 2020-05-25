@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, ImageBackground } from "react-native";
 import { Root } from "native-base";
-import image from '../assets/imgs/Logo.png';
+import image from '../assets/imgs/Logo1.png';
 const BackgroundImage = (props) => {
   return (
     <Root>
@@ -14,9 +14,11 @@ const BackgroundImage = (props) => {
 const styles = StyleSheet.create ({
   backgroundImage: {
     flexGrow: 1,
-    marginTop: '20%',
+    marginTop: '30%',
     width: '100%',
-    height: '30%',
+    height: '35%',
+  
+
     
   },
 });

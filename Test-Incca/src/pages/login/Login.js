@@ -54,7 +54,7 @@ export default class Login extends Component {
       });
     }
 
-    if (typeAcess === "Motorista") {
+    if (typeAcess === "Usuario") {
       return (
         
         AsyncStorage.multiSet([
@@ -119,7 +119,7 @@ export default class Login extends Component {
             <ActivityIndicator size="large" color={"#7159c1"} />
           </ModalLoading>
         ) : (
-          <LinearGradient colors={["#000", "#FFA500"]} style={{ flexGrow: 1,  justifyContent: "top"}}>
+          <LinearGradient colors={["#000", "#FFA500"]} style={{ flexGrow: 1}}>
            <BackgroundImage>
             <View style={styles.container}>
               <View
