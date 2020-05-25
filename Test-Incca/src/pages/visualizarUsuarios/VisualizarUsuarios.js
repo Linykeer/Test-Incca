@@ -38,7 +38,7 @@ export default class VisualizarUsuarios extends Component {
   render() {
     const { Usuarios, visibleModalLoading } = this.state;
     return (
-      <LinearGradient colors={["#FF4500", "#FFF"]} style={{ flexGrow: 1 }}>
+      <LinearGradient colors={["#000", "#FFA500"]} style={{ flexGrow: 1 }}>
         <View>
           <Toolbar title={this.props.title} goTo={this.goTo} />
           {visibleModalLoading ? (

@@ -23,7 +23,6 @@ import usuario from "../assets/imgs/usuario.png";
 import usuarios from "../assets/imgs/usuario.png";
 
 
-
 const { width } = Dimensions.get("screen");
 
 const login = new Login();
@@ -37,9 +36,9 @@ const estilo = (props) => {
 export const MenuItem = (props) => {
   const changeImage = (text) => {
     switch (text) {
-      case "Visualizar Usuários":
+      case "Visualizar usuarios":
         return usuarios;
-      case "Adicionar Usuários":
+      case "Adicionar usuario":
         return usuario;
     }
   };
@@ -55,7 +54,7 @@ export const MenuItem = (props) => {
         style={[styles.menuImage, estilo(props)]}
       >
         <Text
-          style={[styles.menuText, { color: "#000", fontWeight: "bold" }]}
+          style={[styles.menuText, { color: "#000", fontWeight: "cover" }]}
         >
           {props.menu.title}
         </Text>
@@ -113,7 +112,7 @@ const styles = StyleSheet.create({
   menuItem: {
     marginBottom: 16,
     borderRadius: 6,
-    backgroundColor: "#FA8072",
+    backgroundColor: "#D2691E",
   },
   menuImage: {
     width: width * 0.43,
@@ -124,7 +123,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginBottom: 8,
     textAlign: "center",
-    textShadowColor: "#000",
+    textShadowColor: "#fff",
     textShadowRadius: 2,
   },
 });

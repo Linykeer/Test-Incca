@@ -24,7 +24,7 @@ export default class AdicionarUsuario extends Component {
   }
   render() {
     return (
-      <LinearGradient colors={["#7159c1", "#bfb5e3"]} style={{ flexGrow: 1 }}>
+      <LinearGradient colors={["#000", "#FFA500"]} style={{ flexGrow: 1 }}>
         <Toolbar title={this.props.title} goTo={this.goTo} />
         <ProgressSteps
           activeStepIconBorderColor={"#fff"}
@@ -42,7 +42,7 @@ export default class AdicionarUsuario extends Component {
             label="Dados do Usuario"
             nextBtnText={"Próximo"}
             nextBtnStyle={{
-              backgroundColor: "#00e868",
+              backgroundColor: "#FF4500",
               borderRadius: 6,
               width: 120,
               height: 50,
@@ -69,7 +69,7 @@ export default class AdicionarUsuario extends Component {
             nextBtnText={"Próximo"}
             previousBtnText={"Anterior"}
             nextBtnStyle={{
-              backgroundColor: "#00e868",
+              backgroundColor: "#FF4500",
               borderRadius: 6,
               width: 120,
               height: 50,
@@ -78,7 +78,7 @@ export default class AdicionarUsuario extends Component {
             }}
             nextBtnTextStyle={{ color: "#fff" }}
             previousBtnStyle={{
-              backgroundColor: "#00e868",
+              backgroundColor: "#FF4500",
               borderRadius: 6,
               width: 120,
               height: 50,
@@ -123,6 +123,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginHorizontal: 10,
-    marginTop: 30,
+    marginTop: 50,
   },
 });

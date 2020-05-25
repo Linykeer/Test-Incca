@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { StatusBar, View } from "react-native";
+import { StatusBar, View, } from "react-native";
 import Routes from "./src/routes";
 import { FooterLast } from "./src/components/index";
+
 
 export default class App extends Component {
   constructor(props) {
@@ -17,5 +18,8 @@ export default class App extends Component {
         <Routes />
       </View>
     );
+    
   }
+  
 }
+
