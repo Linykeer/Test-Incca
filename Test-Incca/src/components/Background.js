@@ -1,23 +1,24 @@
 import React from "react";
 import { StyleSheet, ImageBackground } from "react-native";
 import { Root } from "native-base";
-import LinearGradient from "react-native-linear-gradient";
-
-const Background = (props) => {
+import image from '../assets/imgs/Logo.png';
+const BackgroundImage = (props) => {
   return (
-    <LinearGradient
-      colors={["#fff", "#FF4500"]}
-      style={{ flexGrow: 1 }}
-    ></LinearGradient>
+    <Root>
+      <ImageBackground source={image} style={styles.backgroundImage}>
+        {props.children}
+      </ImageBackground>
+    </Root>
   );
 };
-
-const styles = StyleSheet.create({
+const styles = StyleSheet.create ({
   backgroundImage: {
     flexGrow: 1,
-    width: "100%",
-    height: "100%",
+    marginTop: '20%',
+    width: '100%',
+    height: '30%',
+    
   },
 });
 
-export default Background;
+export default BackgroundImage;

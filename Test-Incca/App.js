@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { StatusBar, View, } from "react-native";
+import { StatusBar, View} from "react-native";
 import Routes from "./src/routes";
 import { FooterLast } from "./src/components/index";
+
 
 
 export default class App extends Component {
@@ -9,10 +10,9 @@ export default class App extends Component {
     super(props);
     this.state = {};
   }
-
-
   render() {
     return (
+    
       <View style={{ flex: 1 }}>
         <StatusBar backgroundColor={"#FF8C00"} barStyle="light-content" />
         <Routes />
@@ -20,6 +20,4 @@ export default class App extends Component {
     );
     
   }
-  
 }
-

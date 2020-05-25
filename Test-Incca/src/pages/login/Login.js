@@ -14,7 +14,7 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import Icon2 from "react-native-vector-icons/Ionicons";
 import styles from "./LoginStyle";
 import api from "../../services/api";
-//import logo from "../../assets/imagens/logo-dark.png";
+import BackgroundImage from "../../components/Background";
 import AntDesign from "react-native-vector-icons/AntDesign";
 const { height, width } = Dimensions.get("screen");
 
@@ -119,7 +119,8 @@ export default class Login extends Component {
             <ActivityIndicator size="large" color={"#7159c1"} />
           </ModalLoading>
         ) : (
-          <LinearGradient colors={["#000", "#FFA500"]} style={{ flexGrow: 1 }}>
+          <LinearGradient colors={["#000", "#FFA500"]} style={{ flexGrow: 1,  justifyContent: "top"}}>
+           <BackgroundImage>
             <View style={styles.container}>
               <View
                 style={{
@@ -127,12 +128,10 @@ export default class Login extends Component {
                   alignItems: "center",
                 }}
               >
-             
               </View>
               {menuAcess ? (
                 <View
                   style={{
-                    paddingBottom: "57%",
                     justifyContent: "center",
                     alignItems: "center",
                   }}
@@ -152,7 +151,7 @@ export default class Login extends Component {
                         style={{
                           width: width * 0.4,
                           backgroundColor: "#FF4500",
-                          borderRadius: 10,
+                          borderRadius: 30,
                           paddingVertical: 20,
                         }}
                       >
@@ -264,6 +263,7 @@ export default class Login extends Component {
               )}
             </View>
             <Root />
+            </BackgroundImage>
           </LinearGradient>
         )}
       </React.Fragment>
