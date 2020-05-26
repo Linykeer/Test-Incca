@@ -14,9 +14,9 @@ const BackgroundImage = (props) => {
 const styles = StyleSheet.create ({
   backgroundImage: {
     flexGrow: 1,
-    marginTop: '30%',
+    marginTop: '10%',
     width: '100%',
-    height: '35%',
+    height: '43%',
   
 
     

@@ -18,8 +18,8 @@ export default StyleSheet.create({
     flexGrow: 1,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: "40%",
-
+    marginTop: "60%",
+    
   },
   inputBox: {
     width: 300,

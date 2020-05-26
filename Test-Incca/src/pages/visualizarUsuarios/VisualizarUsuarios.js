@@ -102,7 +102,10 @@ export default class VisualizarUsuarios extends Component {
                                   <Body>
                                     <Text
                                       style={{color: '#000', width: '100%'}}>
-                                      {item.nome}
+                                      Nome: {item.nome}
+                                    </Text>
+                                    <Text style = {styles.neighborhood}>
+                                      Contato: {item.contato}
                                     </Text>
                                   </Body>
 

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Keyboard } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-
+import {Toolbar} from '../../../components/index';
 import api from '../../services/api';
 import getRealm from '../../services/realm';
-
+import {Actions} from 'react-native-router-flux';
 import Repository from '../../components/Repository';
 
 import {
@@ -70,8 +70,14 @@ export default function Main() {
 
     setRepositories(repositories.map(repo => (repo.id === data.id ? data : repo)));
   }
+  
+ function goTo(menu) {
+    Actions[menu]();
+  }
 
   return (
+    <>
+    <Toolbar title={'Repositorios'} goTo={goTo} />
     <Container>
       <Title>Repositórios</Title>
 
@@ -98,5 +104,6 @@ export default function Main() {
         )}
       />
     </Container>
+    </>
   );
 }

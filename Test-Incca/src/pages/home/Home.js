@@ -79,7 +79,17 @@ export default class Home extends Component {
               <ActivityIndicator size="large" color="#00e868" />
             ) : (
               <ScrollView>
-                <View style={styles.body}>{this.renderMenu()}</View>
+                <View style={styles.body}>
+                  {routes.map((item, index) =>(
+                    <MenuItem
+                    index={index}
+                    amount={3}
+                    menu={item}
+                    goTo={() => this.goTo(item.key)}
+                    key={item.key}
+                    />
+                  ))}
+                </View>
               </ScrollView>
             )}
           </LinearGradient>

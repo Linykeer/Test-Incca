@@ -19,7 +19,7 @@ import {
 } from "native-base";
 import Entypo from "react-native-vector-icons/Entypo";
 import Login from "../pages/login/Login";
-import usuario from "../assets/imgs/usuario.png";
+import usuario from "../assets/imgs/add.png";
 import usuarios from "../assets/imgs/usuario.png";
 
 
@@ -29,9 +29,15 @@ const login = new Login();
 
 const estilo = (props) => {
   if (props.amount % 2 !== 0 && props.index === props.amount - 1) {
-    return { minWidth: "100%" };
+    return { minWidth: "100%", minHeight:60, justifyContent:'center',};
   } else return { minWidth: "33%" };
 };
+const estiloText = (props) => {
+  if (props.amount % 2 !== 0 && props.index === props.amount - 1) {
+    return {fontSize: 30};
+  } else return { fontSize: 16, fontWeight: "cover"  };
+};
+
 
 export const MenuItem = (props) => {
   const changeImage = (text) => {
@@ -45,7 +51,7 @@ export const MenuItem = (props) => {
 
   return (
     <TouchableOpacity style={[styles.menuItem]} onPress={() => props.goTo()}>
-      {/* <Entypo name={props.menu.nomeImagem} style={styles.icons} /> */}
+      {}
 
       <ImageBackground
         source={changeImage(props.menu.title)}
@@ -54,7 +60,7 @@ export const MenuItem = (props) => {
         style={[styles.menuImage, estilo(props)]}
       >
         <Text
-          style={[styles.menuText, { color: "#000", fontWeight: "cover" }]}
+          style={[styles.menuText, estiloText(props) ]}
         >
           {props.menu.title}
         </Text>
@@ -110,12 +116,12 @@ const styles = StyleSheet.create({
     color: "#7159c1",
   },
   menuItem: {
-    marginBottom: 16,
-    borderRadius: 6,
+    marginBottom: 10,
+    borderRadius: 30,
     backgroundColor: "#D2691E",
   },
   menuImage: {
-    width: width * 0.43,
+    width: width * 0.44,
     minHeight: 130,
     justifyContent: "flex-end",
   },
@@ -125,5 +131,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     textShadowColor: "#fff",
     textShadowRadius: 2,
+    color: "#000"
+  
   },
 });
