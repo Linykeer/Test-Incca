@@ -33,7 +33,7 @@
   },
   "settings": {
     "import/resolver": {
-      "babel-plugin-root-import": { "rootPathSuffix": "srcRP" }
+      "babel-plugin-root-import": { "rootPathSuffix": "src" }
     }
   }
 }

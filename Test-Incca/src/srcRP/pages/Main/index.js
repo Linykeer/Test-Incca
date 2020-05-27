@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Keyboard } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {Toolbar} from '../../../components/index';
-import api from '../../services/api';
+import apii from '../../services/apii';
 import getRealm from '../../services/realm';
 import {Actions} from 'react-native-router-flux';
 import Repository from '../../components/Repository';
-
 import {
   Container, Title, Form, Input, Submit, List,
 } from './styles';
@@ -20,7 +19,7 @@ export default function Main() {
     async function loadRepositories() {
       const realm = await getRealm();
 
-      console.tron.log(realm.path);
+      console.log(realm.path);
 
       const data = realm.objects('Repository').sorted('stars', true);
 
@@ -51,7 +50,7 @@ export default function Main() {
 
   async function handleAddRepository() {
     try {
-      const response = await api.get(`/repos/${input}`);
+      const response = await apii.get(`/repos/${input}`);
 
       await saveRepository(response.data);
 
@@ -64,7 +63,7 @@ export default function Main() {
   }
 
   async function handleRefreshRepository(repository) {
-    const response = await api.get(`/repos/${repository.fullName}`);
+    const response = await apii.get(`/repos/${repository.fullName}`);
 
     const data = await saveRepository(response.data);
 
@@ -77,7 +76,7 @@ export default function Main() {
 
   return (
     <>
-    <Toolbar title={'Repositorios'} goTo={goTo} />
+    <Toolbar title={'Repositórios'} goTo={goTo} />
     <Container>
       <Title>Repositórios</Title>
 
